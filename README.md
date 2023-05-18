@@ -1,5 +1,6 @@
 # Trabalho_Pratico1
 TAREFAS:
+
 Você foi contratado por uma escola para criar um programa para auxiliar os juízes na avaliação dos resultados dos jogos. Seu programa deve ser capaz de, entre outras funções:
 a) calcular o maior e menor saldo consecutivo: Esta funcionalidade calcula o maior (ou menor) valor consecutivo possível de ser gerado a partir de uma fita de resultado. Para o exemplo acima, temos que o maior valor será 218 (posições 4 a 8) e o menor valor será -77 (posições 2 a 3).
 b) Definir qual o rank das melhores jogadas: Esta funcionalidade apresenta qual a eNésima melhor rodada de um jogo. Para o exemplo acima, a 3o melhor rodada foi com valor 65, a 5o melhor rodada foi com valor 30.
