@@ -23,8 +23,7 @@ Seu programa deverá conter um menu com as seguintes opções e funcionalidades:
 9. Limpar a fita para inserção (ou geração) de novos valores;
 0. Sair do programa.
 
-1. Imprimir a fita com as jogados do jogador.
-2. Mostrar o maior e menor saldo consecutivo.
-3. O Valor de uma posição especfica.\n");
-4. Mostrar empates.\n");
-5. Mostrar o maior conjunto de jogadas com a maior pontuação.
+Mostrar o maior e menor saldo consecutivo.
+O Valor de uma posição especfica.\n");
+Mostrar empates.\n");
+Mostrar o maior conjunto de jogadas com a maior pontuação.
