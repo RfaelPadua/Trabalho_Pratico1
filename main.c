@@ -51,8 +51,8 @@ int main(){
         }else{
             continue;
         }
-        printf("Rod ");
 
+        printf("Rod ");
         for(i = 0; i < n_rodadas; i++){
             printf("|%4d| ", i+1);
         }
