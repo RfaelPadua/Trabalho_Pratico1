@@ -39,9 +39,7 @@ int main(){
             for(i = 0; i < n_rodadas; i++)
             {
                 pon[i] = (rand() % 201) + (-100);
-                printf(" %d ", pon[i]);
             }
-            printf("\n");
         }
         else if(r1 == 2)
         {
@@ -50,19 +48,25 @@ int main(){
                 printf("Insira o valor da %d rodada: ", i + 1);
                 scanf(" %d", &pon[i]);
             }
-            
-            for(i = 0; i < n_rodadas; i++)
-            {
-                printf("%d ", pon[i]);
-            }
-            printf("\n");
-        }else
-        {
+        }else{
             continue;
         }
+        printf("Rod ");
 
+        for(i = 0; i < n_rodadas; i++){
+            printf("|%4d| ", i+1);
+        }
+        printf("\n");
+
+        printf("Pon ");
+        for(i = 0; i < n_rodadas; i++){
+            printf("|%4d| ", pon[i]);
+        }
+            printf("\n");
+            
             system("pause");
             system("cls");
+        
 
         do{
             printf("Selecione uma das opcoes a seguir\n");
