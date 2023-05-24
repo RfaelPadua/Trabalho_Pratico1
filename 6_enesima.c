@@ -12,7 +12,7 @@ int main() {
 
     do{
         cont = 0;
-        for(i = 0; i < (n_rodadas - 1); i++){
+        for(i = 0; i < n_rodadas - 1; i++){
             if(vetoraux[i] < vetoraux[i + 1]){
                 aux = vetoraux[i];
                 vetoraux[i] = vetoraux[i + 1];
@@ -21,8 +21,9 @@ int main() {
                 cont++;
             }
         }
-    }while(cont < 16);
+    }while(cont < n_rodadas - 1);
 
     printf("A %d melhor rodada foi com o valor %d.\n", menu3, vetoraux[menu3 - 1]);
 
+    return 0;
 }

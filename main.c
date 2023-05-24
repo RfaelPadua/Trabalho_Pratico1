@@ -35,39 +35,35 @@ int main(){
         scanf(" %d", &menu1);
         system("cls");
 
-        if(menu1 == 1)
-        {
+        if(menu1 == 1){
             srand(time(NULL));
-            for(i = 0; i < n_rodadas; i++)
-            {
+            for(i = 0; i < n_rodadas; i++){
                 pon[i] = (rand() % 201) + (-100);
             }
-        }
-        else if(menu1 == 2)
-        {
-            for(i = 0; i < n_rodadas; i++)
-            {
+        }else if(menu1 == 2){
+            for(i = 0; i < n_rodadas; i++){
                 printf("Insira o valor da %d rodada: ", i + 1);
                 scanf(" %d", &pon[i]);
             }
         }else{
             continue;
         }
+        
         for(i = 0; i < n_rodadas; i++){
             vetoraux[i] = pon[i];
         }
 
-        printf("Rod ");
-        for(i = 0; i < n_rodadas; i++){
-            printf("|%4d| ", i+1);
-        }
-        printf("\n");
+            printf("\nRod ");
+            for(i = 0; i < n_rodadas; i++){
+                printf("|%4d ", i+1);
+            }
+            printf("|\n");
 
-        printf("Pon ");
-        for(i = 0; i < n_rodadas; i++){
-            printf("|%4d| ", pon[i]);
-        }
-            printf("\n");
+            printf("Pon ");
+            for(i = 0; i < n_rodadas; i++){
+                printf("|%4d ", pon[i]);
+            }
+            printf("|\n\n");
             
             system("pause");
             system("cls");
@@ -88,17 +84,17 @@ int main(){
             {
             case 1:
                 system("cls");
-                printf("Rod ");
+                printf("\nRod ");
                 for(i = 0; i < n_rodadas; i++){
-                    printf("|%4d| ", i+1);
+                    printf("|%4d ", i+1);
                 }
-                printf("\n");
+                printf("|\n");
 
                 printf("Pon ");
                 for(i = 0; i < n_rodadas; i++){
-                    printf("|%4d| ", pon[i]);
+                    printf("|%4d ", pon[i]);
                 }
-                    printf("\n");
+                printf("|\n\n");
                 system("pause");
                 break;
             case 2:
@@ -109,7 +105,7 @@ int main(){
             case 3:
                 system("cls");
                 int cont = 0, aux, menu3;
-                
+
                 do{
                 printf("Qual posicao? ");
                 scanf(" %d", &menu3);
