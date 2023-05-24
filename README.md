@@ -22,8 +22,3 @@ Seu programa deverá conter um menu com as seguintes opções e funcionalidades:
 8. Mostrar o maior conjunto de jogadas com maior pontuação (item d). Apresentar também as posições;
 9. Limpar a fita para inserção (ou geração) de novos valores;
 0. Sair do programa.
-
-Mostrar o maior e menor saldo consecutivo.
-O Valor de uma posição especfica.\n");
-Mostrar empates.\n");
-Mostrar o maior conjunto de jogadas com a maior pontuação.
