@@ -7,7 +7,7 @@ int main(){
     int n_rodadas, menu1, menu2, i, j;
     int flag = 0, flag2 = 0;
     
-
+    //Menu inicial
     printf("\n\n\n\n\n\n\n\n\n");
     printf("\t\t\t\t------------------------------\n");
     printf("\t\t\t\t|                            |\n");
@@ -18,16 +18,18 @@ int main(){
     system("pause");
     system("cls");
 
+    //Definir quantas rodadas.
     printf("Quantas rodadas? ");
     scanf(" %d", &n_rodadas);
 
     system("cls");
 
     int pon[n_rodadas];
-    int vetoraux[n_rodadas];
+    int pon_aux[n_rodadas];
 
 
     do{
+        //Primeiro Menu, para definir os valores de cada rodada.
         flag2 = 0;
         printf("Selecione uma das opcoes a seguir\n");
         printf("1. Gerar valores aleatorios\n");
@@ -35,41 +37,44 @@ int main(){
         scanf(" %d", &menu1);
         system("cls");
 
-        if(menu1 == 1){
+        
+        if(menu1 == 1){ //Usar a função rand, usando "time" como semente.
             srand(time(NULL));
             for(i = 0; i < n_rodadas; i++){
                 pon[i] = (rand() % 201) + (-100);
             }
         }else if(menu1 == 2){
-            for(i = 0; i < n_rodadas; i++){
+            for(i = 0; i < n_rodadas; i++){ //Perguntar para o usuario os valores de cada rodada.
                 printf("Insira o valor da %d rodada: ", i + 1);
                 scanf(" %d", &pon[i]);
             }
-        }else{
+        }else{ //Se o usuario nao escolher entre 1 e 2, pare esse iteração e va para a prox.
             continue;
         }
         
+        //Estabelecer um vetor aux, um que posso ser modificado sem atrapalhar outras funcoes
         for(i = 0; i < n_rodadas; i++){
-            vetoraux[i] = pon[i];
+            pon_aux[i] = pon[i];
         }
 
-            printf("\nRod ");
-            for(i = 0; i < n_rodadas; i++){
-                printf("|%4d ", i+1);
-            }
-            printf("|\n");
+        //Layout para demonstrar a fita
+        printf("\nRod ");
+        for(i = 0; i < n_rodadas; i++){
+            printf("|%4d ", i+1);
+        }
+        printf("|\n");
 
-            printf("Pon ");
-            for(i = 0; i < n_rodadas; i++){
-                printf("|%4d ", pon[i]);
-            }
-            printf("|\n\n");
+        printf("Pon ");
+        for(i = 0; i < n_rodadas; i++){
+            printf("|%4d ", pon[i]);
+        }
+        printf("|\n\n");
             
-            system("pause");
-            system("cls");
+        system("pause");
+        system("cls");
         
 
-        do{
+        do{ //Segundo menu
             printf("Selecione uma das opcoes a seguir\n");
             printf("1. Imprimir a fita com as jogados do jogador.\n");
             printf("2. Mostrar o maior e menor saldo consecutivo.\n");
@@ -80,10 +85,11 @@ int main(){
             printf("7. Sair do programa.\n");
             scanf(" %d", &menu2);
 
-            switch (menu2)
-            {
+            switch (menu2){
             case 1:
                 system("cls");
+
+                //Layout para demonstrar a fita
                 printf("\nRod ");
                 for(i = 0; i < n_rodadas; i++){
                     printf("|%4d ", i+1);
@@ -96,6 +102,7 @@ int main(){
                 }
                 printf("|\n\n");
                 system("pause");
+                
                 break;
             case 2:
                 system("cls");
@@ -114,17 +121,17 @@ int main(){
                 do{
                     cont = 0;
                     for(i = 0; i < (n_rodadas - 1); i++){
-                        if(vetoraux[i] < vetoraux[i + 1]){
-                            aux = vetoraux[i];
-                            vetoraux[i] = vetoraux[i + 1];
-                            vetoraux[i + 1] = aux;
+                        if(pon_aux[i] < pon_aux[i + 1]){
+                            aux = pon_aux[i];
+                            pon_aux[i] = pon_aux[i + 1];
+                            pon_aux[i + 1] = aux;
                         }else{
                             cont++;
                         }
                     }
                 }while(cont < n_rodadas - 1);
 
-                printf("A %d melhor rodada foi com o valor %d.\n", menu3, vetoraux[menu3 - 1]);
+                printf("A %d melhor rodada foi com o valor %d.\n", menu3, pon_aux[menu3 - 1]);
                 system("pause");
                 break;
             case 4:
