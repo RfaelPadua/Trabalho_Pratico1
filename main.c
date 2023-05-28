@@ -59,13 +59,13 @@ int main(){
         }
 
         //Layout para demonstrar a fita
-        printf("\nRod ");// cabecalho da fita, Rod = rodada.
+        printf("\nRod ");         // cabecalho da fita, Rod = rodada.
         for(i = 0; i < n_rodadas; i++){
             printf("|%4d ", i+1); // %4d para reservar 4 espaços para a impressao dos numeros,
         }                         //ja que o maior quantidade de digitos possivel na fita eh em -100
         printf("|\n");
 
-        printf("Pon ");// cabecalho da fita, Pon = Pontuacao.
+        printf("Pon ");           // cabecalho da fita, Pon = Pontuacao.
         for(i = 0; i < n_rodadas; i++){
             printf("|%4d ", pon[i]);
         }
